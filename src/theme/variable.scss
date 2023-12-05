@@ -1,0 +1,289 @@
+/* 通用样式变量，不允许更改，除common setting外需与设计同步 */
+
+/* 颜色定义 Start */
+
+// 白色背景
+// 背景取值显示$color-white时使用下方变量
+$color-bg-white: #ffffff;
+// 黑色背景
+$color-bg-black: #000000;
+// 黑色背景 比黑色淺一些
+$color-bg-drak: #222222;
+// 品牌色背景
+$color-bg-brand: #3f77df;
+// 浅色-默认背景
+$color-bg-light: #f7f8fa;
+// 有透明度的白色背景色
+$color-bg-transparent1-1: rgba(255, 255, 255, 0.25);
+$color-bg-transparent1-2: rgba(255, 255, 255, 0.5);
+$color-bg-transparent1-3: rgba(255, 255, 255, 0.7);
+$color-bg-transparent1-4: #ffffff;
+$color-bg-colorful1-1: #ecf8f2;
+$color-bg-colorful1-2: #f5f3ff;
+$color-bg-colorful1-3: #f2f7ff;
+$color-bg-colorful1-4: #fff9f2;
+$color-bg-colorful2-1: #e6f5f0;
+$color-bg-colorful2-2: #e6e6f5;
+$color-bg-colorful2-3: #e4ebf5;
+$color-bg-colorful2-4: #f5eee4;
+$color-bg-colorful2-5: #faf6e1;
+$color-bg-colorful3-1: #70c79c;
+$color-bg-colorful3-2: #a0a0f9;
+$color-bg-colorful3-3: #89affa;
+$color-bg-colorful3-4: #fab571;
+$color-bg-colorful3-5: #ffe226;
+
+// 不透明的中性色
+$color-neutral1-1: #FAFAFA;
+$color-neutral1-2: #F5F5F5;
+$color-neutral1-3: #EEEEEE;
+$color-neutral1-4: #E0E0E0;
+$color-neutral1-5: #BDBDBD;
+$color-neutral1-6: #9E9E9E;
+$color-neutral1-7: #757575;
+$color-neutral1-8: #616161;
+$color-neutral1-9: #424242;
+$color-neutral1-10:#212121;
+
+// 纯透明色
+$color-transparent: transparent;
+// 浅主题色
+$color-brand1-1: #ebf5ff;
+$color-brand1-2: #c0e0ff;
+$color-brand1-3: #98cdff;
+$color-brand1-4: #70b9ff;
+$color-brand1-5: #459aff;
+// 默认主题色
+$color-brand1-6: #448bf7;
+// 深主题色
+$color-brand1-7: #4178e3;
+$color-brand1-8: #3e66d0;
+$color-brand1-9: #2d54bc;
+$color-brand1-10: #1c44ae;
+
+$color-brand1-t1: #f9fcff;
+$color-brand1-t2: #f1f8ff;
+
+// 线条色-浅 表示不可用状态
+$color-line1-1: #e6e7eb;
+// 比默认的浅一点
+$color-line1-2: #dcdee3;
+// 默认线条色，边框。
+$color-line1-3: #c4c6cf;
+// 比默认的深一点
+$color-line1-4: #a0a2ad;
+// 浅-填充色，表示不可用状态
+$color-fill1-1: #f7f8fa;
+$color-fill1-2: #f2f3f7;
+// 默认填充色
+$color-fill1-3: #ebecf0;
+$color-fill1-4: #e2e4e8;
+$color-fill2-1: #f5f5f5;
+$color-fill2-2: #f0f0f0;
+$color-fill2-3: #e6e6e6;
+$color-fill2-4: #e0e0e0;
+// 字体取值显示$color-white时使用下方变量
+$color-white_text1-1: rgba(255, 255, 255, 0.25);
+$color-white_text1-2: rgba(255, 255, 255, 0.5);
+$color-white_text1-3: rgba(255, 255, 255, 0.7);
+$color-white_text1-4: rgba(255, 255, 255, 1);
+$color-black_text1-1: rgba(0, 0, 0, 0.24);
+$color-black_text1-2: rgba(0, 0, 0, 0.38);
+$color-black_text1-50: rgba(0, 0, 0, 0.5);
+$color-black_text1-3: rgba(0, 0, 0, 0.6);
+$color-black_text1-4: rgba(0, 0, 0, 0.87);
+$color-success-1: #e6f8e7;
+$color-success-2: #91d0ad;
+$color-success-3: #39b276;
+$color-success-4: #009654;
+$color-notice-1: #e6f2fe;
+$color-notice-2: #adcffd;
+$color-notice-3: #6194f2;
+$color-notice-4: #5673cf;
+$color-warning-1: #fff2e0;
+$color-warning-2: #ffc780;
+$color-warning-3: #ff9f2c;
+$color-warning-4: #f48526;
+$color-validating-3: #40a9ff;
+$color-error-1: #ffebee;
+$color-error-2: #ef9a9a;
+$color-error-3: #ef5350;
+$color-error-4: #d32e2f;
+$color-help-1: #e9fbfb;
+$color-help-2: #86dada;
+$color-help-3: #44bfc4;
+$color-help-4: #34a4aa;
+$color-link-1: #5584ff;
+$color-link-2: #5584ff;
+$color-link-3: #3e71f7;
+$color-data1-1: #00dccd;
+$color-data1-2: #506fed;
+$color-data1-3: #ae66fc;
+$color-data1-4: #ff445f;
+$color-data1-5: #ff934d;
+$color-data1-6: #ffd74d;
+$color-data1-7: #4dde6d;
+$color-data1-8: #18b1f7;
+$color-data1-9: #939ca5;
+$color-data1-10: #487de4;
+$color-tip-1: #a2a6a8;
+$color-btn-1: #4b80e1;
+/* 颜色定义 End */
+
+/* 圆角定义 Start */
+
+// 默认圆角，输入框、按钮等页面内组件使用，系统中广泛存在。
+$radius-s: 2px;
+// 对话框、卡片等默认使用4px圆角
+$radius-m: 4px;
+// 大面积卡片，页面布局中可使用L尺寸圆角。
+$radius-l: 6px;
+
+/* 圆角定义 End */
+
+/* 阴影定义 Start */
+
+@mixin shadow-1_right-bottom {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+@mixin shadow-1_top {
+    box-shadow: 0px -6px 8px -6px rgba(24, 39, 75, 0.1),
+        0px -8px 16px -6px rgba(24, 39, 75, 0.06);
+}
+@mixin shadow-1_right {
+    box-shadow: 6px 0px 8px -6px rgba(24, 39, 75, 0.1),
+        8px 0px 16px -6px rgba(24, 39, 75, 0.06);
+}
+@mixin shadow-1_bottom {
+    box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.1),
+        0px 8px 16px -6px rgba(24, 39, 75, 0.06);
+}
+@mixin shadow-1_left {
+    box-shadow: -6px 0px 8px -6px rgba(24, 39, 75, 0.1),
+        -8px 0px 16px -6px rgba(24, 39, 75, 0.06);
+}
+@mixin shadow-2-right-bottom {
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+@mixin shadow-2_top {
+    box-shadow: 0px -6px 14px -6px rgba(24, 39, 75, 0.1),
+        0px -10px 32px -4px rgba(24, 39, 75, 0.08);
+}
+@mixin shadow-2_right {
+    box-shadow: 6px 0px 14px -6px rgba(24, 39, 75, 0.1),
+        10px 0px 32px -4px rgba(24, 39, 75, 0.08);
+}
+@mixin shadow-2_bottom {
+    box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.1),
+        0px 10px 32px -4px rgba(24, 39, 75, 0.08);
+}
+@mixin shadow-2_left {
+    box-shadow: -6px 0px 14px -6px rgba(24, 39, 75, 0.1),
+        -10px 0px 32px -4px rgba(24, 39, 75, 0.08);
+}
+@mixin shadow-3_right-bottom {
+    box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.12);
+}
+@mixin shadow-3_top {
+    box-shadow: 0px -8px 22px -6px rgba(24, 39, 75, 0.12),
+        0px -14px 64px -4px rgba(24, 39, 75, 0.12);
+}
+@mixin shadow-3_right {
+    box-shadow: 8px 0px 22px -6px rgba(24, 39, 75, 0.12),
+        14px 0px 64px -4px rgba(24, 39, 75, 0.12);
+}
+@mixin shadow-3_bottom {
+    box-shadow: 0px 8px 22px -6px rgba(24, 39, 75, 0.12),
+        0px 14px 64px -4px rgba(24, 39, 75, 0.12);
+}
+@mixin shadow-3_left {
+    box-shadow: -8px 0px 22px -6px rgba(24, 39, 75, 0.12),
+        -14px 0px 64px -4px rgba(24, 39, 75, 0.12);
+}
+
+@mixin shadow-4_left {
+    box-shadow: -6px 0px 8px -6px #89898d, -8px 0px 16px -6px #89898d;
+}
+@mixin shadow_default {
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
+        0 9px 28px 8px rgb(0 0 0 / 5%);
+}
+
+/* 阴影定义 End */
+
+/* 字体定义 Start */
+
+@mixin baseFontFamily {
+    font-family: OpenSans, "Helvetica Neue", Helvetica, Tahoma, Arial,
+        "PingFang SC", "Microsoft YaHei";
+}
+
+@mixin H1 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+@mixin H2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+@mixin H3 {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+@mixin Head {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin Head2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@mixin Head3 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@mixin body {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@mixin caption {
+    font-size: 12px;
+    line-height: 16px;
+}
+@mixin caption2 {
+    font-size: 14px;
+    line-height: 32px;
+}
+@mixin caption3 {
+    font-size: 12px;
+    line-height: 24px;
+}
+/* 字体定义 End */
+
+// --------------------------------------- 分割线 ---------------------------------------------- //
+
+
+/* 除设计提供之外的系统级变量 */
+
+$table-default-height: 40px;
+$table-middle-height: 32px;
+$table-small-height: 24px;
+// 顶部workspace高度
+$workspaceToolbarHeight: 42px;
+// 左侧宽度Menu
+$workspaceLeftToolbarWidth: 64px;
+// 图标的宽高为fontsize的倍数
+$icon-font-size-multiple-times: 1.15;
+// 滚动条宽度
+$scrollbarWidth: 7px;
+// 部分页面滚动条右侧距离
+$scrollbarMargin: 4px;
+$placeholderColor: $color-black_text1-2;
+$reportDesignCellHeight: 30px;

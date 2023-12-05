@@ -1,0 +1,9 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",  // 引入node，用于ssr
+  "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*"], // 基于vite环境的配置
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"],
+    "ignoreDeprecations": "5.0"
+  }
+}

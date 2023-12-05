@@ -1,0 +1,210 @@
+// 一些自定义的样式变量和方法
+
+@import './variable.scss';
+
+$lgTopBottomPaddingWithBorder: 7px;
+$lgLeftRightPaddingWithBorder: 7px;
+$mdTopBottomPaddingWithBorder: 3px;
+$mdLeftRightPaddingWithBorder: 7px;
+$smTopBottomPaddingWithBorder: 3px;
+$smLeftRightPaddingWithBorder: 7px;
+
+/* 通用的mixin集合，通过使用include引入 */
+
+@mixin textOverflow {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin title-with-left-slash(
+    // 最新使用: leftBorderTitle
+        $slashStyle: "default"
+) {
+    position: relative;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-black_text1-4;
+    @include textOverflow;
+    &::before {
+        content: "";
+        position: absolute;
+        @if $slashStyle == "default" {
+            left: 0px;
+            top: 0px;
+            width: 4px;
+            height: 24px;
+            border-radius: $radius-s;
+        } @else {
+            left: 0px;
+            top: 5px;
+            width: 4px;
+            height: 14px;
+        }
+        background-color: $color-brand1-6;
+    }
+}
+
+@mixin deletedStyle {
+    text-decoration: line-through;
+    color: $color-error-3;
+}
+
+/** 计算当前文字大小下icon的verticalAlign用来垂直对齐 */
+@function calculateSVGIconVeritical($fontSize, $iconSize, $standardSize) {
+    @return #{$iconSize} / #{$standardSize} #{$fontSize} / #{$standardSize};
+}
+
+@mixin bgWhiteStyle {
+    border: 1px solid $color-line1-1;
+    color: $color-black_text1-4;
+}
+
+@mixin bgNotWhiteStyle {
+    border: 1px solid transparent;
+    background-color: $color-bg-transparent1-3;
+}
+
+@mixin bgTransparentStyle {
+    border: 1px solid transparent;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+@mixin hoverAndSelectedStyle {
+    border: 1px solid $color-brand1-6;
+    background-color: $color-bg-white;
+    outline: none;
+    box-shadow: none;
+}
+
+@mixin disableStyle {
+    border: 1px solid $color-line1-1;
+    background-color: $color-fill1-1;
+    color: $color-black_text1-3;
+    box-shadow: none;
+}
+
+@mixin lgSize {
+    @include body();
+}
+
+@mixin lgSizePaddingWithBorder {
+    padding: $lgTopBottomPaddingWithBorder $lgLeftRightPaddingWithBorder;
+}
+
+@mixin mdSize {
+    @include body();
+}
+
+@mixin mdSizePaddingWithBorder {
+    padding: $mdTopBottomPaddingWithBorder $mdLeftRightPaddingWithBorder;
+}
+
+@mixin smSize {
+    @include caption();
+}
+
+@mixin smSizePaddingWithBorder {
+    padding: $smTopBottomPaddingWithBorder $smLeftRightPaddingWithBorder;
+}
+/* common setting end */
+
+@mixin tablePagePadding {
+    padding: 16px;
+}
+
+@mixin buttonPadding {
+    padding: 4px 16px;
+}
+
+/**用于左侧蓝色border <span _ngcontent-hhw-c523="" class="text">参数类型</span>**/
+@mixin leftBorderTitle {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: bold;
+    color: $color-black_text1-4;
+    padding-left: 12px;
+    position: relative;
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 24px;
+        background-color: $color-brand1-6;
+        border-radius: $radius-m;
+    }
+}
+/****用于table中操作列的按钮样式*****/
+@mixin buttonInTable {
+    text-overflow: unset;
+    .ant-btn {
+        padding: 0;
+        height: 24px;
+        line-height: 24px;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}
+/****用于panel面板的title*****/
+$panelWidth_normal: 400px;
+@mixin titleInCommonPanel {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+    .title {
+        flex: 1;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-black_text1-4;
+        @include textOverflow;
+    }
+    .closeBtn {
+        position: absolute;
+        right: 16px;
+        font-size: 16px;
+        color: $color-black_text1-50;
+        cursor: pointer;
+    }
+}
+@mixin footerInCommonPanel {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    justify-content: flex-end;
+}
+@mixin contentInCommonPanel {
+    width: 100%;
+    height: calc(100% - 56px - 64px);
+    padding: 0 16px 0 16px;
+    overflow: hidden auto;
+}
+@mixin contentInCommonPanel_noFooter {
+    width: 100%;
+    height: calc(100% - 56px - 16px);
+    padding: 0 16px 0 16px;
+    overflow: hidden auto;
+}
+@mixin popupMenuContainer {
+    padding: 16px 8px;
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 12px;
+        button:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}
